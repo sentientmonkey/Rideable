@@ -750,7 +750,7 @@ class MountingManager {
 									
 									let vToken = pToken?.object;
 									
-									if (vRidden && vToken && vRidden.owner) {
+									if (vRidden && vToken && vRidden.isOwner) {
 										vToken.release();
 									
 										vRidden.control({});
