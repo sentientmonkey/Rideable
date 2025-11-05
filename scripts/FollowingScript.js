@@ -290,7 +290,7 @@ class FollowingManager {
 		if (game.settings.get(cModuleName, "FollowingAlgorithm") == "SimplePathHistory") {
 			if ((!game.users.find(vUser => vUser.isGM && vUser.active) && pToken.isOwner) || game.user.isGM) {
 				//update path history of pToken
-				await CanvasAnimation.getAnimation(pToken.object?.animationName)?.promise;
+				await foundry.canvas.animation.CanvasAnimation.getAnimation(pToken.object?.animationName)?.promise;
 				await RideableFlags.AddtoPathHistory(pToken, GeometricUtils.updatedGeometry(pToken, pchanges));
 			}
 		}
